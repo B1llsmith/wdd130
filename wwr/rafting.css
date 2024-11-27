@@ -1,110 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-
-:root {
-    /* Primary colors */
-    --primary-color: #1E90FF; /* Dodger Blue */
-    --secondary-color: #2E8B57; /* Sea Green */
-    --accent-color: #DAA520; /* Goldenrod */
-    --additional-accent-color: #708090; /* Slate Gray */
-
-    /* Fonts */
-    --heading-font: "Rock Salt", "Roboto", "Open Sans";
-    --paragraph-font: "Open Sans", "Roboto", "Rock Salt";
-
-    /* Navigation */
-    --navigation-bg-color: #1568A6; /* Deep Blue */
-    --navigation-link-color: #3f71cc; /* White */
-    --navigation-hover-link-color: #4DA6FF; /* Light Blue */
-    --navigation-hover-bg-color: #2E8B57; /* Sea Green */
-}
-
-
-body {
-    font-family: var(--heading-font);
-    font-family: var(--paragraph-font);
-    background-color: var(--background-color);
-    max-width: 960px;
-    margin: 0 auto; /* Centers the content horizontally */
-    padding: 20px;
-}
-
-/* Grouping selector for all headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--primary-color); /* You can choose any color from your schema */
-}
-
-p {
-    padding: 30px;
-
-}
-
-nav a {
-    display: inline;
-    float: right ;
-    color: var(--navigation-link-color);
-    text-decoration: none; /* Remove underline */
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-   justify-content: space-around;
-}
-
-header h1{
-    display: flex;
-    justify-items: center;
-
-}
-.hero {
-    position: relative;
-}
-.hero article {
-    width: 80%;
-    top: 8rem;
-    position: absolute;
-    left: 0;
-    right: 0;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: var(--accent2-color);
+  }
+  
+  .container {
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: rgba(30, 144, 255, .7);
-    color: white;
-}
-.hero h1 article {
-    position: absolute;
-    
-}
-.hero img{
+    padding: 20px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-color);
+  }
+  
+  p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--secondary-color);
+    margin-bottom: 1em;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  footer a img {
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+  }
+  
+  footer a img:hover {
+    opacity: 0.8;
+  }
+  
+  #hero {
+    position: relative;
+    width: 100%;
+  }
+  
+  #hero img {
     width: 100%;
     height: auto;
- 
- 
-}
-.hero article img {
+    display: block;
+  }
+  
+  #hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+  
+  #hero article {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 2;
+    font-size: 1rem;
+  }
+  
+  #hero article img {
     float: right;
+    margin-left: 10px;
+    max-width: 150px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  
+  .adventure-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .adventure-gallery img {
+    border: 2px solid var(--accent1-color);
+    border-radius: 5px;
     width: 200px;
-}
-
-head{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.gallery{
-    display: flex;
-    justify-items: space-around;
-    height: auto;
-    width: 800px;
-    
-}
-
-.adventure h2{
-    display: flex;
-    justify-content: center
-}
-
-section h2{
-    display: flex;
-    justify-content: center
-}
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .adventure-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--white);
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
