@@ -1,136 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: var(--primary-color);
-    background-color: var(--accent2-color);
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
-    color: var(--primary-color);
-  }
-  
-  p {
-    font-family: 'Roboto', sans-serif;
-    color: var(--secondary-color);
-    margin-bottom: 1em;
-  }
-  
-  a {
-    color: var(--primary-color);
+
+:root {
+  --primary-color: #264969;
+  --secondary-color: #505033;
+  --accent1-color: #FF924A;
+  --accent2-color: #E8E8E4;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--accent2-color);
+  color: var(--primary-color);
+}
+
+.logo-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 10px;
+}
+
+.logo-box img {
+  height: 50px;
+}
+
+.logo-box nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.logo-box nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color:#264969;
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  color:#264969;
+  font-family: 'Oswald', sans-serif;
+}
+
+h3 {
+  color:#264969;
+  font-family: 'Oswald', sans-serif;
+}
+
+h4 {
+  color:#264969;
+  font-family: 'Oswald', sans-serif;
+}
+
+h5  {
+  color:#264969;
+  font-family: 'Oswald', sans-serif;
+}
+
+h6  {
+  color:#264969;
+  font-family: 'Oswald', sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: var(--secondary-color);
+  margin-bottom: 1em;
+}
+a  {
     text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  footer a img {
-    text-decoration: none;
-    border: none;
-    display: inline-block;
-  }
-  
-  footer a img:hover {
-    opacity: 0.8;
-  }
-  
-  #hero {
-    position: relative;
-    width: 100%;
-  }
-  
-  #hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  #hero h1 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--white);
-    font-size: 3rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 2;
-  }
-  
-  #hero article {
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    width: 90%;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: var(--secondary-color);
-    padding: 15px;
-    border-radius: 10px;
-    z-index: 2;
-    font-size: 1rem;
-  }
-  
-  #hero article img {
-    float: right;
-    margin-left: 10px;
-    max-width: 150px;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 15px;
-  }
-  
-  .adventure-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .adventure-gallery img {
-    border: 2px solid var(--accent1-color);
-    border-radius: 5px;
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .adventure-gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 10px;
-  }
-  
-  footer p {
-    margin: 5px 0;
-  }
-  
-  footer a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: var(--white);
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
   }
   
