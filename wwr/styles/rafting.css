@@ -1,0 +1,156 @@
+/* Define the color variables */
+:root {
+    --primary-color: #264969;
+    --secondary-color: #505033;
+    --accent1-color: #FF924A;
+    --accent2-color: #E8E8E4;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+}
+
+/* Header using CSS Grid */
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* Adjust grid to fit image, h1 and nav */
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+}
+
+.logo-box img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+/* Navigation Bar using Flexbox */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--accent1-color);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-color);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Content Box */
+.content-box {
+    padding: 20px;
+    background-color: var(--accent2-color);
+}
+
+.content-box h2 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-color);
+}
+
+/* Adventures Section using Grid */
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.adventure-images figure {
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-images img {
+    width: 100%;
+    height: auto;
+}
+
+.adventure-images figcaption {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: white;
+}
+
+footer .social {
+    display: flex;
+    gap: 10px;
+}
+
+footer .social img {
+    width: 30px;
+    height: auto;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        /* Stack the header elements on smaller screens */
+    }
+
+    nav ul {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .adventures {
+        grid-template-columns: 1fr 1fr;
+        /* Stack images two per row on smaller screens */
+    }
+}
