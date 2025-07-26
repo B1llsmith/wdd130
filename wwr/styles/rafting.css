@@ -1,9 +1,13 @@
 /* Define the color variables */
 :root {
-    --primary-color: #9d83c4;
-    /* Wireframe purple */
+    --primary-color: #003366;
+    /* Deep Blue */
     --secondary-color: #FFFFFF;
+    /* White */
     --accent1-color: #E8E8E4;
+    /* Light Gray */
+    --accent2-color: #33A1C9;
+    /* Sky Blue */
     --text-color: #333333;
     --border-color: #CCCCCC;
 }
@@ -12,13 +16,20 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--accent1-color);
+    background-color: var(--secondary-color);
     color: var(--text-color);
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-h2 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Oswald', sans-serif;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 /* Header using CSS Grid */
@@ -27,7 +38,7 @@ header {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 20px;
-    padding: 10px 40px;
+    padding: 20px;
     background-color: var(--primary-color);
 }
 
@@ -40,68 +51,90 @@ header {
 nav ul {
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 25px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-nav ul li a {
-    color: var(--text-color);
-    background-color: var(--secondary-color);
+nav a {
+    color: var(--secondary-color);
     text-decoration: none;
-    font-size: 1em;
-    padding: 8px 15px;
-    border: 1px solid var(--border-color);
+    font-size: 1.2em;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
-    background-color: var(--accent1-color);
+nav a:hover {
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.hero article {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 51, 102, 0.8);
+    padding: 20px;
+    max-width: 80%;
+    border-radius: 8px;
+}
+
+.hero article img {
+    width: 150px;
+    float: right;
+    margin-left: 20px;
+    border: 2px solid var(--secondary-color);
+}
+
+.hero article h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
 }
 
 main {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 /* Generic styles for content sections */
-.info-box,
 .history,
 .adventures {
-    background-color: var(--secondary-color);
-    border: 1px solid var(--border-color);
+    background-color: var(--accent1-color);
     padding: 20px;
-    margin: 0 auto 20px;
-    max-width: 1200px;
+    margin: 20px 0;
+    border-radius: 8px;
 }
 
-.info-box h2,
 .history h2,
 .adventures h2 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 20px;
-    font-size: 2em;
-}
-
-/* White Water Rafting Section */
-.info-content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.info-content p {
-    flex: 3;
-    line-height: 1.6;
-}
-
-.info-content img {
-    flex: 1;
-    max-width: 200px;
-    border: 1px solid var(--border-color);
-    padding: 5px;
+    font-size: 2.5em;
 }
 
 /* History Section */
@@ -117,10 +150,11 @@ main {
 }
 
 .history-content img {
-    flex: 1;
-    max-width: 350px;
+    flex: 1.5;
+    max-width: 40%;
     height: auto;
     border-radius: 8px;
+    border: 3px solid var(--primary-color);
 }
 
 /* Adventures Section */
@@ -138,18 +172,26 @@ main {
 .adventure-images img {
     width: 100%;
     height: auto;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.adventure-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .adventure-images figcaption {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: white;
     padding: 8px;
     font-family: 'Oswald', sans-serif;
     font-size: 1em;
     margin-top: -5px;
-    /* Pull caption up slightly */
     position: relative;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 /* Footer */
@@ -158,7 +200,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
-    padding: 20px 40px;
+    padding: 20px;
     color: white;
 }
 
@@ -174,49 +216,9 @@ footer .social {
 footer .social img {
     width: 35px;
     height: 35px;
-    border: 2px solid white;
+    transition: transform 0.3s;
 }
 
-/* Responsive Design */
-@media (max-width: 900px) {
-    .history-content {
-        flex-direction: column;
-    }
-
-    .adventure-images {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        gap: 15px;
-    }
-
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .info-content {
-        flex-direction: column;
-    }
-
-    .adventure-images {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .adventure-images {
-        grid-template-columns: 1fr;
-    }
+footer .social img:hover {
+    transform: scale(1.2);
 }
