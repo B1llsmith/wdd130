@@ -1,207 +1,162 @@
 /* Define the color variables */
 :root {
-    --primary-color: #003366;
-    /* Deep Blue */
-    --secondary-color: #FFFFFF;
-    /* White */
-    --accent1-color: #E8E8E4;
-    /* Light Gray */
-    --accent2-color: #33A1C9;
-    /* Sky Blue */
-    --text-color: #333333;
-    --border-color: #CCCCCC;
+    --primary-color: #264969;
+    --secondary-color: #505033;
+    --accent1-color: #FF924A;
+    --accent2-color: #E8E8E4;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Oswald', sans-serif;
-    color: var(--primary-color);
-}
-
-/* Header using CSS Grid */
-header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: var(--primary-color);
-}
-
-.logo-box img {
-    height: 80px;
-    width: auto;
-}
-
-/* Navigation Bar using Flexbox */
-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
     background-color: var(--accent2-color);
     color: var(--primary-color);
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
+/* --- Header using CSS Grid --- */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* Logo size is auto, nav takes remaining space */
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+}
+
+header .logo {
+    height: 80px;
+    width: auto;
+}
+
+/* --- Navigation using Flexbox --- */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    /* Pushes nav items to the right */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    background-color: var(--background-color);
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* --- Main Content Sections --- */
+main section {
+    background-color: var(--background-color);
+    border: 1px solid var(--light-gray);
+    margin: 1.5rem;
+    padding: 1.5rem;
+}
+
+main h2 {
+    font-family: var(--heading-font);
     text-align: center;
-    color: white;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3em;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-.hero article {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 51, 102, 0.8);
-    padding: 20px;
-    max-width: 80%;
-    border-radius: 8px;
-}
-
-.hero article img {
-    width: 150px;
-    float: right;
-    margin-left: 20px;
-    border: 2px solid var(--secondary-color);
-}
-
-.hero article h2 {
-    color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 2em;
     margin-top: 0;
 }
 
-main {
-    padding: 20px 0;
-}
-
-/* Generic styles for content sections */
-.history,
-.adventures {
-    background-color: var(--accent1-color);
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-}
-
-.history h2,
-.adventures h2 {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 2.5em;
-}
-
-/* History Section */
-.history-content {
+/* --- Intro Box Section (UPDATED) --- */
+.intro-box {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1.5rem;
+    border: 1px solid var(--light-gray);
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--background-color);
 }
 
-.history-content p {
-    flex: 1;
+.intro-box p {
+    flex-grow: 1;
+    /* Allows the paragraph to take up available space */
     line-height: 1.6;
+    margin: 0;
 }
 
-.history-content img {
-    flex: 1.5;
-    max-width: 40%;
-    height: auto;
-    border-radius: 8px;
-    border: 3px solid var(--primary-color);
+.intro-box img {
+    height: 80px;
+    width: 80px;
 }
 
-/* Adventures Section */
-.adventure-images {
+
+/* --- History Section (UPDATED) --- */
+.history h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* This creates the 3-column layout: text | image | text */
+.history-layout {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.adventure-images figure {
+.history-layout img {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    max-width: 150px;
+    border-radius: 5px;
+}
+
+.history-layout p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* --- Adventures Section --- */
+.adventures h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Adventure gallery using Flexbox */
+.adventure-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.adventure-gallery figure {
     margin: 0;
     text-align: center;
+    flex: 1;
+    /* Each figure takes equal space */
 }
 
-.adventure-images img {
+.adventure-gallery img {
     width: 100%;
     height: auto;
-    border: 2px solid var(--border-color);
-    border-radius: 4px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--light-gray);
 }
 
-.adventure-images img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.adventure-gallery figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
 }
 
-.adventure-images figcaption {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 8px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1em;
-    margin-top: -5px;
-    position: relative;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-/* Footer */
+/* --- Footer Section --- */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
-    padding: 20px;
-    color: white;
+    padding: 1rem 1.5rem;
+    background-color: var(--secondary-color);
 }
 
 footer p {
@@ -210,15 +165,10 @@ footer p {
 
 footer .social {
     display: flex;
-    gap: 15px;
+    gap: 1rem;
 }
 
 footer .social img {
     width: 35px;
     height: 35px;
-    transition: transform 0.3s;
-}
-
-footer .social img:hover {
-    transform: scale(1.2);
 }
