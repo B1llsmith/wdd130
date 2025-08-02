@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="BillSmith Juma">
+    <meta name="description"
+        content="Contact Whitewater Wonders for inquiries, reservations, or feedback. Find our address, phone number, and meet our team.">
+    <title>Contact Us | Whitewater Wonders</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/logowhitewater.webp" alt="Whitewater Wonders Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Reach out with any questions or to plan your next adventure.</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="company-info">
+                <h2>Our Office</h2>
+                <p>123 Nairobi<br>Adventure City, CO 80435</p>
+
+                <h2>Contact Details</h2>
+                <p><strong>Phone:</strong> +254 728147830</p>
+                <p><strong>Email:</strong> <a
+                        href="mailto:contact@whitewaterwonders.com">contact@whitewaterwonders.com</a></p>
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12094.399589998188!2d-105.9004505423855!3d39.63923989999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876a5d4d3d526a8d%3A0x8e25d2b0e6e2f4f1!2sKeystone%2C%20CO%2080435%2C%20USA!5e0!3m2!1sen!2ske!4v1678901234567!5m2!1sen!2ske"
+                        width="600" height="450" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-main">
+                <section class="employee-profiles">
+                    <h2>Meet Our Team</h2>
+                    <div class="profiles-gallery">
+                        <figure>
+                            <img src="images/jane doe1.webp" alt="Lead Guide Jane Juma">
+                            <figcaption><strong>Jane Doe</strong><br>Lead River Guide</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/john smith1.webp" alt="Safety Manager Bill Smith">
+                            <figcaption><strong>John Smith</strong><br>Safety Manager</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/emily white1.webp" alt="Customer Relations Emily White">
+                            <figcaption><strong>Emily White</strong><br>Customer Relations</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <form action="thankyou.html" method="post">
+                    <fieldset>
+                        <legend>Send Us a Message</legend>
+                        <label for="username">Full Name:</label>
+                        <input type="text" id="username" name="username" required>
+
+                        <label for="useremail">Email Address:</label>
+                        <input type="email" id="useremail" name="useremail" required>
+
+                        <p>Purpose of your message:</p>
+                        <div class="radio-group">
+                            <input type="radio" id="inquiry" name="purpose" value="inquiry" checked>
+                            <label for="inquiry">General Inquiry</label>
+
+                            <input type="radio" id="reservation" name="purpose" value="reservation">
+                            <label for="reservation">Reservation Question</label>
+
+                            <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                            <label for="suggestion">Website Suggestion</label>
+                        </div>
+
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                            <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                        </div>
+                    </fieldset>
+                    <button type="submit">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Whitewater Wonders - Created by BILLSMITH JUMA</p>
+        <div class="social">
+            <a href="https://facebook.com"><img src="images/facebook.webp" alt="Facebook"></a>
+            <a href="https://twitter.com"><img src="images/twitter.webp" alt="Twitter"></a>
+            <a href="https://instagram.com"><img src="images/instagram.webp" alt="Instagram"></a>
+            <a href="images/contact-wireframe.png" target="_blank">Wireframe</a>
+        </div>
+    </footer>
+</body>
+
+</html>
