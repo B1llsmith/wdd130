@@ -451,3 +451,71 @@ form button[type="submit"]:hover {
     margin: 0 auto;
     border-radius: 10px;
 }
+
+/* --- TRIPS PAGE STYLES --- */
+
+.trips-header {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.trips-header h1 {
+    font-family: var(--heading-font);
+    margin-top: 0;
+}
+
+.trip-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 1.5rem;
+}
+
+.trip-card-reversed {
+    direction: rtl;
+    /* Reverses the order of columns */
+}
+
+.trip-card-reversed .trip-info {
+    direction: ltr;
+    /* Resets text direction for content */
+}
+
+.trip-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.trip-card h3 {
+    font-family: var(--heading-font);
+    font-size: 1.8em;
+    color: var(--primary-color);
+}
+
+.trips-table-section {
+    margin: 2rem 1.5rem;
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.trips-table th,
+.trips-table td {
+    border: 1px solid var(--light-gray);
+    padding: 1rem;
+    text-align: left;
+}
+
+.trips-table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.trips-table tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
