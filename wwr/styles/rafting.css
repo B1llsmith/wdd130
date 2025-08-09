@@ -385,6 +385,7 @@ form button[type="submit"]:hover {
     margin: 1.5rem;
 }
 
+
 .card {
     background: white;
     border: 1px solid var(--light-gray);
@@ -518,4 +519,14 @@ form button[type="submit"]:hover {
 
 .trips-table tbody tr:nth-child(even) {
     background-color: #f4f4f4;
+}
+
+/* Addition rafting.css file */
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }

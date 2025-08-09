@@ -35,8 +35,10 @@
         <section class="newsletter-form">
             <h2>Sign Up for Our Newsletter</h2>
             <form action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
+                <label for="name" class="visually-hidden">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email" class="visually-hidden">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
                 <button type="submit">Sign Up</button>
             </form>
         </section>
